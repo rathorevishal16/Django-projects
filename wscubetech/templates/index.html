@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>{{title}}</title>
+        <style>
+            .main{
+                width : 100px;
+                background-color: red;
+                color: white;
+                padding : 10px
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "main">
+            Welcome to homepage
+        </div>
+        {% for n in clist %}
+        <div>{{n}}</div>
+        {% endfor %}
+
+        <br/>
+        <h3>Student Details</h3>
+        <table border="1" cellpadding="10">
+            <tr>
+                <th>Name</th>
+                <th>Phone</th>
+            </tr>
+            {% for s in student_details %}
+            <tr>
+                <td>{{s.name}}</td>
+                <td>{{s.phone}}</td>
+            </tr>
+            {% endfor %}
+            </table>
+    </body>
+</html>
